@@ -16,7 +16,7 @@ resource "aws_instance" "dbec2-1" {
   yum -y install mariadb105-server
   systemctl start mariadb
   systemctl enable mariadb
-  DB_ENDPOINT="${data.aws_db_instance.rds.endpoint}
+  DB_ENDPOINT="${data.aws_db_instance.rds.endpoint}"
    EOT
   
 tags = {
